@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <title>Virtual Oscilloscope </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/module/oscilliscope/main.css">
+    <style type="text/css" class="demo-specific-styles">
+        #demo{
+            position:relative;
+        }
+        canvas{
+            position: absolute;
+            top:0;
+            left:0;
+            display: block;
+            border:solid 5px #E3E3E3;
+            /*border-radius: 10px;*/
+            /*background: #E3E3E3;*/
+        }
+        .preamble{
+            margin-bottom: 20px;
+        }
+        .embedded {
+            height:380px;
+            overflow:hidden;
+        }
+        .embedded #ui-container {
+            height: 358px;
+            overflow-y: scroll;
+        }
+        .embedded .header,
+        .embedded .preamble,
+        .embedded .sponsor-wrapper,
+        .embedded .demo-description,
+        .embedded .sidebar,
+        .embedded .footer {
+            display:none;
+        }
+        .embedded .main {
+            width: 100%;
+            padding: 10px;
+            margin: 0 auto;
+            box-sizing: border-box;
+        }
+        .embed-title {
+            margin-top: 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body class="body--shaded  embedded" style="">
+
+<div class="wrapper">
+
+    <div class="main">
+        <div id="demo" class="" style="height: 368px;">
+
+        </div>
+
+        <div class="clearfix" id="ui-container">
+
+        </div>
+
+            </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="/javascripts/animation.js"></script>
+        <script src="/javascripts/common.js"></script>
+        <script src="/javascripts/demoClass.js"></script>
+        <script src="/javascripts/jquery.nouislider.min.js"></script>
+        <script src="/javascripts/ui.js"></script>
+        <script src="/module/oscilliscope/AudioContextMonkeyPatch.js"></script>
+        <script src="/module/oscilliscope/oscilliscope.js" gapi_processed="true"></script>
+
+
+    <script>
+        //ASSET SERVING
+        $(document).trigger({
+            type: "scriptLoaded"
+        });
+    </script>
+    </div>
+
+
+</body>
+</html>
